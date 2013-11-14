@@ -5,7 +5,7 @@
 */
 jQuery(document).ready(function($) {
 	$main = $('main');
-	$toLoad(' main>*');
+	$toLoad = (' main>*');
 	loadPage = function(href,push) {
 		if (push) history.pushState('', '', href);
 			$main.load(href + $toLoad, function(html) {
