@@ -4,9 +4,11 @@
   License: Free to use and distribute
 */
 jQuery(document).ready(function($) {
+	$main = $('main');
+	$toLoad(' main>*');
 	loadPage = function(href,push) {
 		if (push) history.pushState('', '', href);
-			$main.load(href + " main>*", function(html) {
+			$main.load(href + $toLoad, function(html) {
 			document.title = $(html).filter('title').text();
 		}
 	}
